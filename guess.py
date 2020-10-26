@@ -4,16 +4,16 @@ import random
 counts = 0
 answer = random.randint(1, 100)
 
-while counts >=0:
+while counts >=0:     
     temp = input("请输入一个100以内的正整数： ")
     guess = int(temp)
 
-    if guess > 100:
+    if guess > 100:     # 也可能小于0呢，是否应该也判断？
         print("超出范围啦")
         break
         
     else:
-        if guess == answer:
+        if guess == answer:      # 用多个分支，可以不用嵌套。嵌套速度慢
             counts = counts + 1
             print("猜中啦！")
             print("你猜了：" + str(counts) + "次")
